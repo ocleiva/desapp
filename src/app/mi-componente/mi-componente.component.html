@@ -1,0 +1,19 @@
+<p>Octavio Leiva. Imagen Comentarios</p>
+<img src="assets/leo.jpeg" alt="">
+
+
+<h1>Comentarios</h1>
+
+  <input type="text" [(ngModel)]="comentario" placeholder="Agrega un comentario">
+  <button (click)="mostrar()">Agregar</button>
+
+
+<ul>
+  <li *ngFor="let comment of comments">{{ comment }}</li>
+</ul>
+
+
+<div *ngFor="let comentario of comments; let i = index">
+  
+  <button (click)="eliminarComentario(i)">Eliminar </button>
+</div>
